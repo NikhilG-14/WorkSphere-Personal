@@ -11,6 +11,7 @@ import JobDetailPage from "./pages/JobDetailPage";
 import JobProposalPage from "./pages/JobProposalPage";
 import ManageJobsPage from "./pages/ManageJobsPage";
 import ProposalManagementPage from "./pages/ProposalManagementPage";
+import CreateJobPage from "./pages/CreateJobPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -26,6 +27,7 @@ const App = () => (
           <Route path="/onboarding" element={<OnboardingPage />} />
           <Route path="/dashboard" element={<DashboardPage />} />
           <Route path="/jobs" element={<JobListingPage />} />
+          <Route path="/jobs/create" element={<CreateJobPage />} />
           <Route path="/jobs/:jobId" element={<JobDetailPage />} />
           <Route path="/jobs/:jobId/apply" element={<JobProposalPage />} />
           <Route path="/manage-jobs" element={<ManageJobsPage />} />

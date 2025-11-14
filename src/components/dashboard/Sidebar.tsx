@@ -52,6 +52,13 @@ export const Sidebar = ({
       badge: null,
       route: `/dashboard?role=${userRole}`
     },
+    ...(userRole === "client" ? [{
+      id: "create-job",
+      label: "Post Job",
+      icon: Upload,
+      badge: "New",
+      route: `/jobs/create?role=${userRole}`
+    }] : []),
     { 
       id: "jobs", 
       label: userRole === "client" ? "Manage Jobs" : "Browse Jobs", 

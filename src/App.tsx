@@ -12,6 +12,9 @@ import JobProposalPage from "./pages/JobProposalPage";
 import ManageJobsPage from "./pages/ManageJobsPage";
 import ProposalManagementPage from "./pages/ProposalManagementPage";
 import CreateJobPage from "./pages/CreateJobPage";
+import DisputeOverviewPage from "./pages/DisputeOverviewPage";
+import DisputeDetailPage from "./pages/DisputeDetailPage";
+import RaiseDisputePage from "./pages/RaiseDisputePage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -32,6 +35,9 @@ const App = () => (
           <Route path="/jobs/:jobId/apply" element={<JobProposalPage />} />
           <Route path="/manage-jobs" element={<ManageJobsPage />} />
           <Route path="/proposals" element={<ProposalManagementPage />} />
+          <Route path="/disputes" element={<DisputeOverviewPage />} />
+          <Route path="/disputes/:disputeId" element={<DisputeDetailPage />} />
+          <Route path="/disputes/raise" element={<RaiseDisputePage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
